@@ -37,6 +37,7 @@
       }
 
       MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
+          console.log("fired");
         formsWrapper = document.querySelector("#test-package");
         if (!checkboxClicked && !checkboxTarget) {
           event.preventDefault();
