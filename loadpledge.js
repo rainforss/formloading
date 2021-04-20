@@ -25,7 +25,7 @@
 
     //Used IIFE to avoid conflicts of variables
     
-        console.log("loaded");
+        console.log(MsCrmMkt.MsCrmFormLoader);
       let modal = document.getElementById("prompt-modal");
       let modalButton = modal.querySelector("#modal-join");
       modalButton.addEventListener("click", checkAndClose);
