@@ -24,7 +24,7 @@
     noButton.addEventListener("click", showForm);
 
     //Used IIFE to avoid conflicts of variables
-    (function () {
+    
         console.log("loaded");
       let modal = document.getElementById("prompt-modal");
       let modalButton = modal.querySelector("#modal-join");
@@ -69,7 +69,7 @@
           closeModal();
         }
       };
-    })();
+
     MsCrmMkt.MsCrmFormLoader.on("afterFormSubmit", function (event) {
       pledgeChoice.remove();
       pledgeTitle.remove();
