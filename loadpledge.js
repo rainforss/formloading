@@ -25,6 +25,7 @@
 
     //Used IIFE to avoid conflicts of variables
     (function () {
+        console.log("loaded");
       let modal = document.getElementById("prompt-modal");
       let modalButton = modal.querySelector("#modal-join");
       modalButton.addEventListener("click", checkAndClose);
