@@ -8,6 +8,7 @@
     const requestURL =
       "https://prod-15.canadacentral.logic.azure.com:443/workflows/81250a9e4c2045579821849937411401/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=3qXIYmIUdrf9x6YPL6CR8ACqcoYTneXUuOKrJiTl7tY";
     const showForm = function (e) {
+        console.log("fired");
       yesButton.classList.add("hidden");
       noButton.classList.add("hidden");
       if (e.target.id === "yes") {
