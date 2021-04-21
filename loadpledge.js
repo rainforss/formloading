@@ -41,11 +41,12 @@ function checkboxPrompt(e) {
 }
 
 MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
-  console.log(event.formPlaceholder.parentNode.className);
+  const parentClass = event.formPlaceholder.parentNode.className;
+  const isNoForm = parentClass.includes("no-form");
   formsWrapper = document.querySelector(
     `div[data-form-block-id="${event.formPageId}"]`
   );
-  if (!checkboxClicked && !checkboxTarget) {
+  if (!checkboxClicked && !checkboxTarget && !isNoForm) {
     event.preventDefault();
     openModal();
   }
