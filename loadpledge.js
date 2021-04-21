@@ -41,6 +41,7 @@ function checkboxPrompt(e) {
 }
 
 MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
+  console.log(event);
   formsWrapper = document.querySelector(
     `div[data-form-block-id="${event.formPageId}"]`
   );
