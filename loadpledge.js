@@ -33,8 +33,10 @@ function checkboxPrompt(e) {
 }
 
 MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
-  console.log(event);
-  formsWrapper = document.querySelector("#test-package");
+  console.log(event.formPageId);
+  formsWrapper = document.querySelector(
+    `div[data-block-id="${event.formPageId}"]`
+  );
   if (!checkboxClicked && !checkboxTarget) {
     event.preventDefault();
     openModal();
