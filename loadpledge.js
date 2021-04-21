@@ -16,8 +16,12 @@ const showForm = function (e) {
     noForm.classList.add("shown");
   }
 };
+if(yesButton){
 yesButton.addEventListener("click", showForm);
+};
+if(noButton){
 noButton.addEventListener("click", showForm);
+};
 
 let modal = document.getElementById("prompt-modal");
 let modalButton = modal.querySelector("#modal-join");
