@@ -26,11 +26,14 @@ modalButton.addEventListener("click", checkAndClose);
 let checkboxClicked = false;
 let checkboxTarget;
 let formsWrapper;
-let checkboxes = document.querySelectorAll(
-  `input[name="be63b8b8-4f20-eb11-a813-000d3af3d354"]`
-);
-console.log(checkboxes);
-checkboxes.forEach((c) => c.addEventListener("click", checkboxPrompt));
+let checkboxes;
+window.onload = function () {
+  checkboxes = document.querySelectorAll(
+    `input[name="be63b8b8-4f20-eb11-a813-000d3af3d354"]`
+  );
+  console.log(checkboxes);
+  checkboxes.forEach((c) => c.addEventListener("click", checkboxPrompt));
+};
 
 function checkboxPrompt(e) {
   checkboxClicked = true;
