@@ -76,9 +76,9 @@ window.onclick = function (event) {
   }
 };
 
-MsCrmMkt.MsCrmFormLoader.on("afterFormSubmit", function (event) {
-  pledgeChoice.remove();
-  pledgeTitle.remove();
-  yesForm.remove();
-  noForm.remove();
-});
+// MsCrmMkt.MsCrmFormLoader.on("afterFormSubmit", function (event) {
+//   pledgeChoice.remove();
+//   pledgeTitle.remove();
+//   yesForm.remove();
+//   noForm.remove();
+// });
