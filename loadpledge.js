@@ -35,7 +35,7 @@ function checkboxPrompt(e) {
 MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
   console.log(event.formPageId);
   formsWrapper = document.querySelector(
-    `div[data-block-id="${event.formPageId}"]`
+    `div[data-form-block-id="${event.formPageId}"]`
   );
   if (!checkboxClicked && !checkboxTarget) {
     event.preventDefault();
