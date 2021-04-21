@@ -2,7 +2,6 @@ const yesButton = document.querySelector("#yes");
 const noButton = document.querySelector("#no");
 const yesForm = document.getElementById("yes-form");
 const noForm = document.getElementById("no-form");
-const subscribersHeading = document.getElementById("supporter-count");
 const pledgeTitle = document.getElementById("pledge-form-title");
 const pledgeChoice = document.getElementById("pledge-choice");
 const showForm = function (e) {
