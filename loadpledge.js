@@ -40,6 +40,7 @@ function checkboxPrompt(e) {
 }
 
 MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
+  console.log("fired");
   const parentClass = event.formPlaceholder.parentNode.className;
   const isNoForm = parentClass.includes("no-form");
   formsWrapper = document.querySelector(
