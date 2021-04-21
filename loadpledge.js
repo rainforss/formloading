@@ -32,18 +32,15 @@ MsCrmMkt.MsCrmFormLoader.on("afterFormLoad", function (event) {
   checkboxes = document.querySelectorAll(
     `input[name="be63b8b8-4f20-eb11-a813-000d3af3d354"]`
   );
-  console.log(checkboxes);
   checkboxes.forEach((c) => c.addEventListener("click", checkboxPrompt));
 });
 
 function checkboxPrompt(e) {
   checkboxClicked = true;
   checkboxTarget = e.target;
-  console.log(checkboxTarget);
 }
 
 MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
-  console.log(event.formPageId);
   formsWrapper = document.querySelector(
     `div[data-form-block-id="${event.formPageId}"]`
   );
