@@ -34,6 +34,7 @@ checkboxes.forEach((c) => c.addEventListener("click", checkboxPrompt));
 function checkboxPrompt(e) {
   checkboxClicked = true;
   checkboxTarget = e.target;
+  console.log(checkboxTarget);
 }
 
 MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
