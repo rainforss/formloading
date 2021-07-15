@@ -25,35 +25,35 @@ noButton.addEventListener("click", showForm);
 
 let modal = document.getElementById("prompt-modal");
 let modalButton = modal.querySelector("#modal-join");
-modalButton.addEventListener("click", checkAndClose);
+// modalButton.addEventListener("click", checkAndClose);
 let checkboxClicked = false;
 let checkboxTarget;
 let formsWrapper;
 let checkboxes;
 
-MsCrmMkt.MsCrmFormLoader.on("afterFormLoad", function (event) {
-  checkboxes = document.querySelectorAll(
-    `input[name="be63b8b8-4f20-eb11-a813-000d3af3d354"]`
-  );
-  checkboxes.forEach((c) => c.addEventListener("click", checkboxPrompt));
-});
+// MsCrmMkt.MsCrmFormLoader.on("afterFormLoad", function (event) {
+//   checkboxes = document.querySelectorAll(
+//     `input[name="be63b8b8-4f20-eb11-a813-000d3af3d354"]`
+//   );
+//   checkboxes.forEach((c) => c.addEventListener("click", checkboxPrompt));
+// });
 
-function checkboxPrompt(e) {
-  checkboxClicked = true;
-  checkboxTarget = e.target;
-}
+// function checkboxPrompt(e) {
+//   checkboxClicked = true;
+//   checkboxTarget = e.target;
+// }
 
 MsCrmMkt.MsCrmFormLoader.on("formSubmit", function (event) {
-  console.log("fired");
+//   console.log("fired");
   const parentClass = event.formPlaceholder.parentNode.className;
   const isNoForm = parentClass.includes("no-form");
   formsWrapper = document.querySelector(
     `div[data-form-block-id="${event.formPageId}"]`
   );
-  if (!checkboxClicked && !checkboxTarget && !isNoForm) {
-    event.preventDefault();
-    openModal();
-  }
+//   if (!checkboxClicked && !checkboxTarget && !isNoForm) {
+//     event.preventDefault();
+//     openModal();
+//   }
 });
 
 function openModal() {
@@ -72,12 +72,12 @@ function checkAndClose() {
   closeModal();
 }
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    checkboxClicked = true;
-    closeModal();
-  }
-};
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     checkboxClicked = true;
+//     closeModal();
+//   }
+// };
 
 // MsCrmMkt.MsCrmFormLoader.on("afterFormSubmit", function (event) {
 //   pledgeChoice.remove();
